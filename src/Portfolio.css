@@ -495,7 +495,7 @@ body {
   pointer-events: none;
   animation: float 7s ease-in-out infinite;
 }
-
+s
 .b1 {
   width: 90px;
   height: 90px;
@@ -967,4 +967,383 @@ section h2::after {
 
 #projects p {
   text-align: center;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE DESIGN
+   ======================================== */
+
+/* Prevent horizontal scrolling */
+html {
+  width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section {
+  scroll-margin-top: 20px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 760px) {
+
+  /* Navigation */
+  nav {
+    width: 100%;
+    gap: 14px;
+    padding: 18px 0;
+  }
+
+  nav .logo {
+    font-size: 1.4rem;
+  }
+
+  nav ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 18px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  /* Main hero section */
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+    padding: 40px 0 55px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    line-height: 1.15;
+    overflow-wrap: break-word;
+  }
+
+  .hero p.lead {
+    max-width: 100%;
+    margin: 20px auto 25px;
+    font-size: 1rem;
+  }
+
+  .hero .btns,
+  .about .btns,
+  .contact .btns {
+    justify-content: center;
+  }
+
+  /* Code window */
+  .win {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 5px 5px 0 var(--c1);
+  }
+
+  .win pre {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre;
+    font-size: 0.75rem;
+  }
+
+  .demo {
+    padding: 18px;
+  }
+
+  /* Sections */
+  section {
+    padding: 45px 0;
+  }
+
+  section h2 {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+  }
+
+  .sub {
+    max-width: 100%;
+    margin: 0 auto 25px;
+  }
+
+  /* Project filters */
+  .tabs {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .tab {
+    padding: 9px 14px;
+    font-size: 0.9rem;
+  }
+
+  /* Project cards */
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    min-width: 0;
+    padding: 18px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+    overflow-wrap: anywhere;
+  }
+
+  .card p {
+    overflow-wrap: anywhere;
+  }
+
+  .chips {
+    gap: 6px;
+  }
+
+  .chip {
+    overflow-wrap: anywhere;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Skills */
+  .skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .skills > div {
+    min-width: 0;
+    padding: 16px;
+  }
+
+  /* About section */
+  .about {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .learning {
+    min-width: 0;
+  }
+
+  /* Moving text banner */
+  .marquee {
+    margin-bottom: 35px;
+  }
+
+  .track {
+    gap: 25px;
+    font-size: 1rem;
+  }
+
+  /* Decorative project blobs */
+  #projects .b5 {
+    width: 130px;
+    height: 130px;
+    left: -75px;
+  }
+
+  #projects .b6 {
+    width: 160px;
+    height: 160px;
+    right: -90px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 30px 0;
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+
+  .wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  nav ul {
+    column-gap: 14px;
+    row-gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  .hero {
+    padding-top: 30px;
+    gap: 28px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 9vw, 2.7rem);
+  }
+
+  .hero p.lead {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .btns {
+    gap: 10px;
+  }
+
+  .btn {
+    max-width: 100%;
+    padding: 11px 16px;
+    font-size: 0.9rem;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .skills {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .tabs {
+    justify-content: center;
+  }
+
+  .tab {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .learning {
+    padding: 18px;
+  }
+
+  .contact h2 {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+  }
+
+  .b1 {
+    width: 55px;
+    height: 55px;
+  }
+
+  .b2 {
+    width: 40px;
+    height: 40px;
+  }
+
+  .b3 {
+    width: 65px;
+    height: 65px;
+    right: -20px;
+  }
+
+  .b4 {
+    width: 30px;
+    height: 30px;
+  }
+
+  .win pre {
+    font-size: 0.68rem;
+    padding: 12px;
+  }
+
+  .track {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 360px) {
+
+  .wrap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  nav ul {
+    column-gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btns .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .rv {
+    opacity: 1;
+    transform: none;
+  }
 }
